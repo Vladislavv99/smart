@@ -1,0 +1,872 @@
+:root {
+    --backround-color: #fff;
+    --text-color: #333;
+    --title-color: #BDBDBD;
+    --number-color: #F2F2F2;
+    --background-footer-color: #2C2C2C;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol,
+li {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: var(--backround-color);
+    font-family: "TT Hoves Pro Trial", sans-serif;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+._anim-show {
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.5s linear 250ms;
+}
+
+._anim-show._active,
+._active ._anim-show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 102px;
+}
+
+.logo {
+    width: 68.6px;
+    margin-left: 136.45px;
+    margin-right: 330px;
+}
+
+.logo .name-company {
+    position: absolute;
+    top: 60.4px;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navigation-list li {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 12px;
+    margin-right: 60px;
+    align-items: center;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.navigation-list li a {
+    color: var(--text-color);
+}
+
+.navigation-list li:first-child:before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--text-color);
+    width: 68px;
+    margin-bottom: 4px;
+}
+
+.navigation-list li:first-child:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--text-color);
+    width: 68px;
+    margin-top: 4px;
+}
+
+.navigation-list li:last-child {
+    margin-right: 0;
+}
+
+.for-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.for-hover::before,
+.for-hover::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    margin: -4px 0;
+    height: 1px;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.for-hover::before {
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+    transform: scaleX(0);
+}
+
+.for-hover::after {
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    transform: scaleX(0);
+}
+
+.for-hover:hover::before,
+.for-hover:hover::after {
+    opacity: 1;
+    width: 100%;
+    transform: scaleX(1);
+}
+
+.project-home {
+    margin-bottom: 120px;
+    display: flex;
+}
+
+.name-section {
+    margin-right: 123px;
+}
+
+.name-section ._active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.name-section h1 {
+    width: 278px;
+    margin-top: 333px;
+    margin-bottom: 90px;
+    color: var(--title-color);
+    font-family: inherit;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+    transform: translate(0, 170%);
+    opacity: 0;
+    transition: all 700ms linear;
+}
+
+.name-section h1 span {
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.main-img {
+    position: relative;
+}
+
+.main-img button {
+    padding: 0;
+    top: 756.5px;
+    position: absolute;
+    width: 222px;
+    height: 71px;
+    background-color: var(--backround-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    transition: all 300ms linear;
+}
+
+.main-img button:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.for-arrows {
+    display: flex;
+    transform: translate(0, 170%);
+    opacity: 0;
+    transition: all 700ms linear 600ms;
+}
+
+.for-arrows ._active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.for-arrows .first-btn {
+    padding: 0;
+    width: 53px;
+    height: 53px;
+    margin-right: 23px;
+    border: 1px solid #F2F2F2;
+    background: var(--backround-color);
+    transition: all 300ms linear;
+}
+
+.for-arrows .first-btn:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.for-arrows .second-btn {
+    padding: 0;
+    width: 53px;
+    height: 53px;
+    margin-right: 0;
+    margin-bottom: 94px;
+    border: 1px solid #F2F2F2;
+    background: var(--backround-color);
+    transition: all 300ms linear;
+}
+
+.for-arrows .second-btn:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.for-numbers {
+    display: flex;
+    transform: translate(0, 170%);
+    opacity: 0;
+    transition: all 700ms linear 900ms;
+}
+
+.for-numbers ._active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.for-numbers .line-45deg {
+    transform: rotate(-45deg);
+}
+
+.for-numbers .first-num {
+    color: var(--title-color);
+    font-family: inherit;
+    position: relative;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-right: 89px;
+}
+
+.for-numbers .first-num:after {
+    content: "";
+    top: 50%;
+    left: 48px;
+    position: absolute;
+    background: #E0E0E0;
+    display: flex;
+    width: 44px;
+    height: 2px;
+    transform: rotate(-45deg);
+}
+
+.for-numbers .second-num {
+    color: var(--title-color);
+    font-family: inherit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about-company {
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.two-pic {
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.two-pic .first-pic {
+    margin-bottom: 30px;
+}
+
+.one-pic {
+    margin-top: 60px;
+    margin-right: 30px;
+}
+
+.info-about-us {
+    width: 400px;
+    margin-top: 30px;
+}
+
+.info-about-us h2 {
+    color: var(--title-color);
+    font-family: inherit;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+    margin-bottom: 20px;
+}
+
+.info-about-us p {
+    color: #000;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.info-about-us button {
+    background-color: var(--backround-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    transition: all 300ms linear;
+    padding: 24px 64px 23px 65px;
+}
+
+.info-about-us button:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.main-tasks {
+    margin-bottom: 120px;
+}
+
+.main-tasks h2 {
+    color: var(--title-color);
+    font-family: inherit;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+    margin-bottom: 60px;
+}
+
+.our-tasks {
+    display: flex;
+}
+
+.our-tasks div {
+    display: flex;
+}
+
+.our-tasks .number-of-task {
+    color: var(--number-color);
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-right: 30px;
+}
+
+.our-tasks .first-task-info {
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    width: 279px;
+    align-items: center;
+    margin-right: 187px;
+    margin-top: 43px;
+}
+
+.our-tasks .second-task-info {
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    width: 420px;
+    align-items: center;
+    margin-right: 187px;
+    margin-top: 43px;
+}
+
+.our-projects {
+    margin-bottom: 120px;
+}
+
+.our-projects img {
+    scale: 1;
+    box-shadow: none;
+    transition: all 300ms linear;
+}
+
+.our-projects img:hover {
+    border-radius: 15px;
+    scale: 1.07;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.our-projects .first-item {
+    margin-right: 30px;
+}
+
+.our-projects button {
+    background-color: var(--text-color);
+    color: white;
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    border: 1px solid transparent;
+    padding: 24px 64px 23px 65px;
+    transition: all 500ms linear;
+    margin-left: auto;
+    display: block;
+}
+
+.our-projects button svg {
+    fill: white;
+    transition: all 500ms linear;
+}
+
+.our-projects button:hover {
+    border: 1px solid var(--text-color);
+    background-color: white;
+    color: var(--text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.our-projects button:hover svg {
+    fill: var(--text-color);
+}
+
+.firts-loyer {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.firts-loyer div {
+    position: absolute;
+    width: 570px;
+    height: 255px;
+    opacity: 0.8;
+    background: var(--text-color);
+}
+
+.second-loyer {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.second-loyer .for-marg {
+    margin-right: 30px;
+}
+
+.our-center h3 {
+    color: white;
+    font-family: inherit;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    width: 413px;
+    margin-top: 48px;
+    margin-left: 79px;
+}
+
+.our-center button {
+    padding: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    display: inline;
+    margin-left: 69px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.contact-us {
+    margin-bottom: 120px;
+}
+
+.contact-us h2 {
+    color: var(--title-color);
+    font-family: inherit;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+    margin-bottom: 22px;
+}
+
+.contact-info {
+    display: flex;
+}
+
+.contact-info img {
+    height: 369px;
+}
+
+.contact-form {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form textarea {
+    background-color: #F3F3F3;
+    border: 1px solid rgba(46, 47, 66, 0.2);
+    margin-bottom: 22px;
+    padding-top: 14px;
+    padding-left: 21px;
+    outline: transparent;
+    transition: all 300ms linear;
+    height: 147px;
+}
+
+.contact-form textarea::-moz-placeholder {
+    color: #8D8D8D;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+}
+
+.contact-form textarea::placeholder {
+    color: #8D8D8D;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+}
+
+.contact-form textarea:focus {
+    border: 1px solid rgba(103, 104, 125, 0.7);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form input {
+    width: 391px;
+    height: 46px;
+    background-color: #F3F3F3;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 21px;
+    margin-bottom: 10px;
+    outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.2);
+    transition: all 300ms linear;
+}
+
+.contact-form input:focus {
+    border: 1px solid rgba(103, 104, 125, 0.7);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form input::-moz-placeholder {
+    color: #8D8D8D;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+}
+
+.contact-form input::placeholder {
+    color: #8D8D8D;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+}
+
+.contact-form p {
+    width: 331px;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    margin-left: 40px;
+    margin-bottom: 21px;
+}
+
+.contact-form button {
+    background-color: var(--text-color);
+    color: white;
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    border: 1px solid transparent;
+    padding: 24px 64px 23px 65px;
+    transition: all 500ms linear;
+    margin-right: auto;
+}
+
+.contact-form button svg {
+    fill: white;
+    transition: all 500ms linear;
+}
+
+.contact-form button:hover {
+    border: 1px solid var(--text-color);
+    background-color: white;
+    color: var(--text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form button:hover svg {
+    fill: var(--text-color);
+}
+
+.footer-all-info {
+    display: flex;
+}
+
+.footer {
+    background-color: var(--background-footer-color);
+}
+
+.footer hr {
+    stroke-width: 1px;
+    stroke: #FFF;
+    opacity: 0.1;
+    margin: 0;
+}
+
+.footer>p {
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: rgba(200, 200, 200, 0.5);
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.logo-footer {
+    margin-left: 116px;
+    margin-top: 58px;
+    margin-right: 100px;
+}
+
+.logo-footer svg {
+    fill: white;
+}
+
+.info-footer {
+    margin-right: 157px;
+}
+
+.info-footer li {
+    margin-bottom: 16px;
+}
+
+.info-footer h4 {
+    margin-top: 58px;
+    margin-bottom: 25px;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.info-footer a {
+    color: #FFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+}
+
+.contact-footer h4 {
+    margin-top: 58px;
+    margin-bottom: 25px;
+    color: #FFF;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.contact-footer li {
+    display: flex;
+}
+
+.contact-footer li:last-child {
+    margin-bottom: 60px;
+}
+
+.contact-footer li a {
+    width: 314px;
+    margin-bottom: 31px;
+    color: #FFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+}
+
+.contact-footer li p {
+    width: 270px;
+    height: 72px;
+    margin-bottom: 31px;
+    color: #FFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+}
+
+.contact-footer svg {
+    margin-top: 5px;
+    margin-right: 19px;
+    fill: transparent;
+    stroke: white;
+}
+
+.social-networks h4 {
+    margin-top: 58px;
+    margin-bottom: 24px;
+    color: #FFF;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.social-networks ul {
+    display: flex;
+}
+
+.social-networks ul li {
+    width: 20px;
+    margin-right: 40px;
+}
+
+.social-networks a {
+    width: 20px;
+    height: 20px;
+}
+
+.social-networks a svg {
+    fill: white;
+    transition: all 300ms linear;
+}
+
+.social-networks a:hover svg {
+    fill: rgb(240, 196, 196);
+}
+
+.for-hover-footer {
+    position: relative;
+    display: inline-block;
+}
+
+.for-hover-footer::before,
+.for-hover-footer::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    margin: -1px 0;
+    height: 1px;
+    background-color: var(--backround-color);
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.for-hover-footer::before {
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+    transform: scaleX(0);
+}
+
+.for-hover-footer::after {
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    transform: scaleX(0);
+}
+
+.for-hover-footer:hover::before,
+.for-hover-footer:hover::after {
+    opacity: 1;
+    width: 100%;
+    transform: scaleX(1);
+}
